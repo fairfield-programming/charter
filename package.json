@@ -5,16 +5,27 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node index.js",
     "lint": "next lint"
   },
   "dependencies": {
+    "leaflet": "^1.9.3",
+    "mysql2": "^3.2.0",
     "next": "13.2.4",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-credit-cards": "^0.8.3",
+    "react-dom": "18.2.0",
+    "react-leaflet": "^4.2.1",
+    "sequelize": "^6.29.3",
+    "sqlite3": "^5.1.4"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4"
+    "eslint-config-next": "13.2.4",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7"
   }
 }
