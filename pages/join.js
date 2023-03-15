@@ -57,16 +57,16 @@ export default function IndexPage ({ announcements }) {
     <section className="max-w-4xl mt-16 p-4 mx-auto">
         <h2 className="text-3xl font-black">School Information</h2>
         <div className='p-2'>
-            <label for="school_name" className='text-lg font-bold'>School Name</label>
+            <label htmlFor="school_name" className='text-lg font-bold'>School Name</label>
             <input id="school_name" placeholder="Greens Farms Academy" className='border w-full rounded-xl p-2 text-xl' />
         </div>
         <div className='p-2 grid grid-cols-2 gap-2'>
             <div>
-                <label for="school_nces_id" className='text-lg font-bold'>NCES ID</label>
+                <label htmlFor="school_nces_id" className='text-lg font-bold'>NCES ID</label>
                 <input id="school_nces_id" placeholder="010000500870" className='border w-full rounded-xl p-2 text-xl' />
             </div>
             <div>
-                <label for="school_type" className='text-lg font-bold'>School Type</label>
+                <label htmlFor="school_type" className='text-lg font-bold'>School Type</label>
                 <select id="school_type" className='border w-full rounded-xl p-2 text-xl'>
                     <option>Public</option>
                     <option>Charter</option>
@@ -79,20 +79,20 @@ export default function IndexPage ({ announcements }) {
             For the information above, please find the schools official name, school type, and NCES ID. This information should be obtained and verified from the administrator that signs the document.
         </p>
         <div className='p-2'>
-            <label for="school_name" className='text-lg font-bold'>Address Line</label>
+            <label htmlFor="school_name" className='text-lg font-bold'>Address Line</label>
             <input id="school_name" placeholder="35 Beachside Ave" className='border w-full rounded-xl p-2 text-xl' />
         </div>
         <div className='p-2 grid grid-cols-3 gap-2'>
             <div>
-                <label for="school_nces_id" className='text-lg font-bold'>Town</label>
+                <label htmlFor="school_nces_id" className='text-lg font-bold'>Town</label>
                 <input id="school_nces_id" placeholder="Westport" className='border w-full rounded-xl p-2 text-xl' />
             </div>
             <div>
-                <label for="school_nces_id" className='text-lg font-bold'>State</label>
+                <label htmlFor="school_nces_id" className='text-lg font-bold'>State</label>
                 <input id="school_nces_id" placeholder="Connecticut" className='border w-full rounded-xl p-2 text-xl' />
             </div>
             <div>
-                <label for="school_type" className='text-lg font-bold'>Area Code</label>
+                <label htmlFor="school_type" className='text-lg font-bold'>Area Code</label>
                 <input id="school_nces_id" placeholder="06880" className='border w-full rounded-xl p-2 text-xl' />
             </div>
         </div>
@@ -100,16 +100,16 @@ export default function IndexPage ({ announcements }) {
             Above is the area for the official address of the school. This is the address listed on websites, communications, and official documents. This will also be where the package is shipped to.
         </p>
         <div className='p-2'>
-            <label for="school_name" className='text-lg font-bold'>Administrator Name</label>
+            <label htmlFor="school_name" className='text-lg font-bold'>Administrator Name</label>
             <input id="school_name" placeholder="Michael Thompson" className='border w-full rounded-xl p-2 text-xl' />
         </div>
         <div className='p-2 grid grid-cols-2 gap-2'>
             <div>
-                <label for="school_nces_id" className='text-lg font-bold'>Administrator Email</label>
+                <label htmlFor="school_nces_id" className='text-lg font-bold'>Administrator Email</label>
                 <input id="school_nces_id" type="email" placeholder="thompsonm@gfacademy.org" className='border w-full rounded-xl p-2 text-xl' />
             </div>
             <div>
-                <label for="school_type" className='text-lg font-bold'>Administrator Position</label>
+                <label htmlFor="school_type" className='text-lg font-bold'>Administrator Position</label>
                 <input id="school_nces_id" placeholder="Head of Upper School" className='border w-full rounded-xl p-2 text-xl' />
             </div>
         </div>
@@ -122,16 +122,16 @@ export default function IndexPage ({ announcements }) {
       <div>
         <h3 className="text-2xl font-bold underline mt-4">Charter President</h3>
         <div className='p-2'>
-            <label for="school_name" className='text-lg font-bold'>Full Name</label>
+            <label htmlFor="school_name" className='text-lg font-bold'>Full Name</label>
             <input id="school_name" placeholder="William McGonagle" className='border w-full rounded-xl p-2 text-xl' />
         </div>
         <div className='p-2 grid grid-cols-2 gap-2'>
             <div>
-                <label for="school_nces_id" className='text-lg font-bold'>Email</label>
+                <label htmlFor="school_nces_id" className='text-lg font-bold'>Email</label>
                 <input id="school_nces_id" type="email" placeholder="william@placeholder.com" className='border w-full rounded-xl p-2 text-xl' />
             </div>
             <div>
-                <label for="school_type" className='text-lg font-bold'>Birth Date</label>
+                <label htmlFor="school_type" className='text-lg font-bold'>Birth Date</label>
                 <input id="school_nces_id" type="date" className='border w-full rounded-xl p-2 text-xl' />
             </div>
         </div>
@@ -142,16 +142,16 @@ export default function IndexPage ({ announcements }) {
       <div>
         <h3 className="text-2xl font-bold underline mt-4">Charter Vice-President</h3>
         <div className='p-2'>
-            <label for="school_name" className='text-lg font-bold'>Full Name</label>
+            <label htmlFor="school_name" className='text-lg font-bold'>Full Name</label>
             <input id="school_name" placeholder="Neil Chaudhari" className='border w-full rounded-xl p-2 text-xl' />
         </div>
         <div className='p-2 grid grid-cols-2 gap-2'>
             <div>
-                <label for="school_nces_id" className='text-lg font-bold'>Email</label>
+                <label htmlFor="school_nces_id" className='text-lg font-bold'>Email</label>
                 <input id="school_nces_id" type="email" placeholder="neil@placeholder.com" className='border w-full rounded-xl p-2 text-xl' />
             </div>
             <div>
-                <label for="school_type" className='text-lg font-bold'>Birth Date</label>
+                <label htmlFor="school_type" className='text-lg font-bold'>Birth Date</label>
                 <input id="school_nces_id" type="date" className='border w-full rounded-xl p-2 text-xl' />
             </div>
         </div>
@@ -162,16 +162,16 @@ export default function IndexPage ({ announcements }) {
       <div>
         <h3 className="text-2xl font-bold underline mt-4">Charter Treasurer</h3>
         <div className='p-2'>
-            <label for="school_name" className='text-lg font-bold'>Full Name</label>
+            <label htmlFor="school_name" className='text-lg font-bold'>Full Name</label>
             <input id="school_name" placeholder="Zoma Tessema" className='border w-full rounded-xl p-2 text-xl' />
         </div>
         <div className='p-2 grid grid-cols-2 gap-2'>
             <div>
-                <label for="school_nces_id" className='text-lg font-bold'>Email</label>
+                <label htmlFor="school_nces_id" className='text-lg font-bold'>Email</label>
                 <input id="school_nces_id" type="email" placeholder="zoma@placeholder.com" className='border w-full rounded-xl p-2 text-xl' />
             </div>
             <div>
-                <label for="school_type" className='text-lg font-bold'>Birth Date</label>
+                <label htmlFor="school_type" className='text-lg font-bold'>Birth Date</label>
                 <input id="school_nces_id" type="date" className='border w-full rounded-xl p-2 text-xl' />
             </div>
         </div>
@@ -185,20 +185,20 @@ export default function IndexPage ({ announcements }) {
         <div className='p-2 grid grid-cols-2 gap-2'>
             <div>
                 <div>
-                    <label for="card_owner" className='text-lg font-bold'>Card Owner</label>
+                    <label htmlFor="card_owner" className='text-lg font-bold'>Card Owner</label>
                     <input id="card_owner" placeholder="William McGonagle" className='border w-full rounded-xl p-2 text-xl' />
                 </div>
                 <div className='mt-2'>
-                    <label for="card_number" className='text-lg font-bold'>Card Number</label>
+                    <label htmlFor="card_number" className='text-lg font-bold'>Card Number</label>
                     <input id="card_number" placeholder="**** **** **** ****" className='border w-full rounded-xl p-2 text-xl' />
                 </div>
                 <div className='mt-2 grid grid-cols-2 gap-2'>
                     <div>
-                        <label for="school_nces_id" className='text-lg font-bold'>CVC</label>
+                        <label htmlFor="school_nces_id" className='text-lg font-bold'>CVC</label>
                         <input id="school_nces_id" type="email" placeholder="143" className='border w-full rounded-xl p-2 text-xl' />
                     </div>
                     <div>
-                        <label for="card_expiration" className='text-lg font-bold'>Expiration Date</label>
+                        <label htmlFor="card_expiration" className='text-lg font-bold'>Expiration Date</label>
                         <input id="card_expiration" placeholder="4/24" className='border w-full rounded-xl p-2 text-xl' />
                     </div>
                 </div>
