@@ -1,8 +1,5 @@
 import Sequelize from "sequelize";
 
-import * as Dotenv from 'dotenv'
-Dotenv.config();
-
 import users from "./users.js";
 import charters from "./charters.js";
 import announcements from "./announcements.js";
