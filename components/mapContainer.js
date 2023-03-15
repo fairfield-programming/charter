@@ -13,7 +13,7 @@ const _MapContainer = ({ charters }) => {
         />
         {
             charters.map(i => 
-                <Marker position={[i.lat, i.long]} icon={icon({
+                <Marker key={i.id} position={[i.lat, i.long]} icon={icon({
                     iconUrl: "/marker.svg",
                     iconSize: [32, 32],
                     iconAnchor: [16, 32]

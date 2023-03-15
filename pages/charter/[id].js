@@ -27,7 +27,7 @@ export default function CharterPage ({ charter }) {
             <h2 className="text-3xl font-black">Announcements</h2>
             <div className="grid grid-cols-3 gap-4 p-4">
                 {
-                    (charter.announcements || []).map(i => <Announcement small id={i.id} title={i.title.slice(0, 32) + "..."} short={i.content.slice(0, 48) + "..."} />)
+                    (charter.announcements || []).map(i => <Announcement small key={i.id} id={i.id} title={i.title.slice(0, 32) + "..."} short={i.content.slice(0, 48) + "..."} />)
                 }
             </div>
         </section>

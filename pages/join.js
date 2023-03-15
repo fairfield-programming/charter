@@ -176,7 +176,7 @@ export default function IndexPage ({ announcements }) {
             </div>
         </div>
         <p className='mb-8 text-md mx-auto max-w-xl'>
-            The Charter Treasurer is the third-in-command of the charter. They manage the finances, take notes during charter meetings, and organize the charter's online presence and marketing.
+            The Charter Treasurer is the third-in-command of the charter. They manage the finances, take notes during charter meetings, and organize the charter&apos;s online presence and marketing.
         </p>
       </div>
     </section>
@@ -214,7 +214,7 @@ export default function IndexPage ({ announcements }) {
             </div>
         </div>
         <p className='mb-8 text-md mx-auto max-w-xl'>
-            To start a charter, there is a one time payment of $50.00 USD. This charge is to cover the cost of the charter box that we ship to you once we approve your application. If your application doesn't get approved, you will be given a full refund.
+            To start a charter, there is a one time payment of $50.00 USD. This charge is to cover the cost of the charter box that we ship to you once we approve your application. If your application doesn&apos;t get approved, you will be given a full refund.
         </p>
     </section>
   </Layout>

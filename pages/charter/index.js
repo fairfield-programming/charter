@@ -25,7 +25,7 @@ export default function CharterPage ({ charters }) {
         <section className="max-w-4xl mt-4 p-2 mx-auto">
           {
             (charters || []).filter(i => i == "" || i.name.includes(search)).map(i => 
-              <Link href={`/charter/${i.id}`}>
+              <Link key={i.id} href={`/charter/${i.id}`}>
                 <article className="border p-4 rounded-xl my-4" key={i.name}>
                   <h2 className="text-2xl font-bold">{ i.name }</h2>
                   <p className="text-lg">{ i.description }</p>
