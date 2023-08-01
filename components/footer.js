@@ -1,5 +1,6 @@
 import * as React from "react"
 // import Logo from '../public/fpa.svg'
+import Link from 'next/link'
 
 const Footer = ({ siteTitle }) => (
     <footer aria-label="Site Footer" className="shadow-2xl mt-8">
@@ -10,7 +11,8 @@ const Footer = ({ siteTitle }) => (
         </a>
   
         <p className="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right">
-          Copyright &copy; { new Date().getFullYear() }. All rights reserved.
+          Copyright &copy; { new Date().getFullYear() }. All rights reserved.<br />
+          <Link href="/user/login" className="underline">Log In.</Link>
         </p>
       </div>
     </div>

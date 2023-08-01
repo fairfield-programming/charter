@@ -17,7 +17,8 @@ export default (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER,
     charterId: DataTypes.INTEGER,
     title: DataTypes.STRING,
-    content: DataTypes.TEXT
+    content: DataTypes.TEXT,
+    short: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'announcements',
