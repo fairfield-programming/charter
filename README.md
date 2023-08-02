@@ -1,5 +1,9 @@
 # Charter
 
+## Installation
+
+You need Node and NPM to run this. 
+
 ## Todo
 - [ ] Emails and notifications.
   - [ ] Email when charter signs up.
