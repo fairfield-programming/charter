@@ -2,7 +2,9 @@
 
 ## Installation
 
-You need Node and NPM to run this. 
+You need Node and NPM to run this. Clone the repository. 
+
+Run `npm install` then run `npm run dev`.
 
 ## Todo
 - [ ] Emails and notifications.
