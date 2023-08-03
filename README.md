@@ -12,7 +12,10 @@ Then run `npm run dev`.
 
 ## Todo
 
+- [X] Charter map
+- [X] Charter search
 - [X] Announcements
+  - [X] List announcements.
   - [X] Post announcements.
   - [X] View announcements.
   - [ ] Comment on announcements.
