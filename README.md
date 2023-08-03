@@ -4,7 +4,7 @@
 
 You need Node and NPM to run this. Clone the repository. 
 
-Run `npm install` then run `npm run dev`.
+Run `npm install --force` then run `npm run dev`.
 
 ## Todo
 - [ ] Emails and notifications.
