@@ -19,30 +19,33 @@ Then run `npm run dev`.
   - [X] Post announcements.
   - [X] View announcements.
   - [ ] Comment on announcements.
-- [ ] Signup system.
+  - [ ] Notifications when announcements are posted.
+- [ ] Events
+  - [ ] Post events.
+  - [ ] RSVP to events.
+  - [ ] List events.
+  - [ ] Local calendar/ global calendar (modeled after itch.io).
+- [X] Signup system.
   - [X] Payment.
   - [X] Address to Coordinates.
   - [X] NCES Verification.
   - [ ] Member Verification.
-- [ ] Charter dashboard.
+    - [ ] Verification through government data?
+    - [ ] Email verification.
+- [ ] Dashboard/ Settings.
   - [ ] Add members.
   - [ ] Change member roles.
-- [ ] Emails and notifications.
-  - [ ] Email when charter signs up.
-  - [ ] Email when a new user is created for a charter.
-- [ ] Add verification layers.
-  - [ ] Verification through government data?
-  - [ ] Email verification
-- [ ] Make sure that the payment system works.
-  - [ ] Figure out some way to ship packages.
-- [ ] Add "Find a Partner School".
-  - [ ] Use government data.
-  - [ ] Add a UI.
-- [ ] Add "Find a Library".
-  - [ ] Use government data.
-  - [ ] Add a UI.
-- [ ] Add an event system along with checklists.
-  - [ ] Users should be able to RSVP.
+  - [X] Settings.
+    - [X] Change password.
+    - [X] Change username.
+    - [X] Change email.
+  - [ ] Tools
+    - [ ] Add "Find a Partner School".
+      - [ ] Use government data.
+      - [ ] Add a UI.
+    - [ ] Add "Find a Library".
+      - [ ] Use government data.
+      - [ ] Add a UI.
 - [ ] Weekly emails about nearby charters.
 - [ ] Approval of charters when they are started. 
 
