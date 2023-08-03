@@ -4,7 +4,11 @@
 
 You need Node and NPM to run this. Clone the repository. 
 
-Run `npm install --force` then run `npm run dev`.
+Run `npm install --force`.
+
+Create a file named `.env`. Copy and paste the message data that William McGonagle sent you. 
+
+Then run `npm run dev`.
 
 ## Todo
 - [ ] Emails and notifications.
