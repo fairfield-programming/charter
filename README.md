@@ -11,6 +11,7 @@ Create a file named `.env`. Copy and paste the message data that William McGonag
 Then run `npm run dev`.
 
 ## Todo
+
 - [ ] Emails and notifications.
   - [ ] Email when charter signs up.
   - [ ] Email when a new user is created for a charter.
@@ -28,3 +29,15 @@ Then run `npm run dev`.
 - [ ] Add an event system along with checklists.
   - [ ] Users should be able to RSVP.
 - [ ] Weekly emails about nearby charters.
+
+- [ ] Curriculum?
+- [ ] Tutoring service?
+  - [ ] One on one, signup sheet
+  - [ ] We don't want to burn out the tutors
+- [ ] Merged online classes?
+- [ ] "Priority schools"
+  - [ ] Schools can sign up on the website and they get special priority.
+- [ ] Calendar for events
+  - [ ] Competition system.
+- [ ] Message board.
+- [ ] Resources for charters to convince lowerschools to integrate into curriculum.
