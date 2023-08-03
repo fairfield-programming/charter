@@ -12,6 +12,18 @@ Then run `npm run dev`.
 
 ## Todo
 
+- [X] Announcements
+  - [X] Post announcements.
+  - [X] View announcements.
+  - [ ] Comment on announcements.
+- [ ] Signup system.
+  - [X] Payment.
+  - [X] Address to Coordinates.
+  - [X] NCES Verification.
+  - [ ] Member Verification.
+- [ ] Charter dashboard.
+  - [ ] Add members.
+  - [ ] Change member roles.
 - [ ] Emails and notifications.
   - [ ] Email when charter signs up.
   - [ ] Email when a new user is created for a charter.
