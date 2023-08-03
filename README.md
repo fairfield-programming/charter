@@ -41,3 +41,6 @@ Then run `npm run dev`.
   - [ ] Competition system.
 - [ ] Message board.
 - [ ] Resources for charters to convince lowerschools to integrate into curriculum.
+- [ ] LinkedIn for charters.
+- [ ] Direct messaging.
+- [ ] Image uploading.
