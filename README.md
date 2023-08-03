@@ -29,6 +29,7 @@ Then run `npm run dev`.
 - [ ] Add an event system along with checklists.
   - [ ] Users should be able to RSVP.
 - [ ] Weekly emails about nearby charters.
+- [ ] Approval of charters when they are started. 
 
 - [ ] Curriculum?
 - [ ] Tutoring service?
