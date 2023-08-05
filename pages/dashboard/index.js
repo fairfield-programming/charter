@@ -13,10 +13,26 @@ export default function IndexPage ({ mainAnnouncement, localAnnouncement, global
     <Head>
       <title>Dashboard • FPA Charter Program</title>
     </Head>
-    <section className="max-w-5xl mt-16 p-4 mx-auto">
+    <section className='max-w-5xl mt-16 p-4 mx-auto flex flex-row gap-4'>
+      <aside className='border rounded w-1/4'>
+
+      </aside>
+      <main className='w-3/4 flex flex-col gap-4'>
+        <article className='border rounded w-full'>
+
+        </article>
+        <article className='border rounded w-full'>
+
+        </article>
+        <article className='border rounded w-full'>
+
+        </article>
+      </main>
+    </section>
+    {/* <section className="max-w-5xl mt-16 p-4 mx-auto">
         <h1 className="text-5xl font-black">Dashboard</h1>
         <p className="my-4">Manage your charter, find new connections, grow your learning.</p>
-    </section>
+    </section> */}
     <Tabbar pages={[ { 
         text: "Overview", 
         url: "/dashboard",
