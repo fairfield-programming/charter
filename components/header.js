@@ -15,10 +15,14 @@ const Header = ({ auth }) => (
   >
     <Link
       href="/"
-      className="flex h-10 whitespace-nowrap px-4 font-bold items-center justify-center rounded-lg border"
+      className="flex p-1 h-12 whitespace-nowrap font-bold items-center justify-center rounded-lg border"
     >
       <span className="sr-only">FPA Charter Program Logo</span>
-      <Image className="h-full" src={Logo} alt="FPA Charter Program Logo" priority />
+      <Image className="h-full w-min" src={Logo} alt="FPA Charter Program Logo" priority />
+      <div className="flex flex-col">
+        <span className="font-black text-sm p-0 m-0 leading-4">Hi, William!</span>
+        <span className="font-light text-xs p-0 m-0 leading-3">Greens Farms Academy</span>
+      </div>
     </Link>
 
     <ul className="flex items-center gap-2 text-sm font-medium text-gray-500">
