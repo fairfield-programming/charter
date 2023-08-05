@@ -42,12 +42,12 @@ export default function IndexPage ({ mainAnnouncement, globalAnnouncements }) {
     </Head>
     <section id="intro" className="max-w-4xl mt-32 mb-64 p-4 mx-auto">
       <h1 class="text-3xl font-extrabold sm:text-5xl">
-          Join the FPA... We have Cookies. 🍪 
+          Help us teach the world.
       </h1>
 
       <p class="mt-4 sm:text-xl sm:leading-relaxed max-w-2xl">
-          Ok, maybe we don&apos;t have cookies. But, we have the tools to
-          help you teach programming, along with a network of volunteers just like you.
+          With this program, you can help spread the knowledge of 
+          computer science with the help of tools, resources, and friends.
       </p>
     </section>
     {/* <section className="max-w-5xl mt-16 p-4 mx-auto">
