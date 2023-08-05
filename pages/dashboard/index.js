@@ -49,7 +49,7 @@ export default function IndexPage ({ mainAnnouncement, localAnnouncement, global
       </svg>
       } ]} />
       <section className='text-xl flex items-center justify-center h-full p-32'>
-        There's nothing in this section yet. 🤪
+        There&apos;s nothing in this section yet. 🤪
       </section>
   </Layout>
 }

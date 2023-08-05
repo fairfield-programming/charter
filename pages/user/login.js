@@ -3,6 +3,7 @@ import * as React from "react"
 import { useCookies } from "react-cookie"
 
 import Head from "next/head"
+import Link from "next/link"
 import { useRouter } from 'next/router'
 
 import Layout from "../../components/layout"
@@ -64,10 +65,10 @@ export default function CharterPage ({  }) {
                     />
 
                     <div class="hidden lg:relative lg:block lg:p-12">
-                        <a class="block text-white" href="/">
+                        <Link class="block text-white" href="/">
                         <span class="sr-only">Home</span>
                             <img className="h-10 sm:h-16" src="/logo_white.svg" alt="White FPA Logo" />
-                        </a>
+                        </Link>
 
                         <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
                         Welcome Back!
@@ -86,13 +87,13 @@ export default function CharterPage ({  }) {
                     >
                     <div className="max-w-xl lg:max-w-3xl">
                         <div className="relative -mt-16 block lg:hidden">
-                        <a
+                        <Link
                             className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
                             href="/"
                         >
                             <span className="sr-only">Home</span>
                             <img className="h-12 sm:h-12" src="/logo_dark.svg" alt="White FPA Logo" />
-                        </a>
+                        </Link>
 
                         <h1
                             class="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl"

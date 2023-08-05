@@ -51,7 +51,7 @@ export default function IndexPage ({ mainAnnouncement, localAnnouncement, global
       <section className='p-4 w-full grid grid-cols-3 gap-4'>
         <Link className='border rounded-xl p-4' href="/announcement/new">
           <h2 className='text-xl font-bold'>Create a New Announcement</h2>
-          <p className='text-sm'>By clicking here, you are brought to a page where you can create a new announcement. You should write it in Google Docs first, because changes aren't saved here.</p>
+          <p className='text-sm'>By clicking here, you are brought to a page where you can create a new announcement. You should write it in Google Docs first, because changes aren&apos;t saved here.</p>
         </Link>
         <Link className='border rounded-xl p-4' href="#">
           <h2 className='text-xl font-bold'>Find a Partner School</h2>

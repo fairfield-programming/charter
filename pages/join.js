@@ -188,7 +188,7 @@ export default function IndexPage ({ announcements }) {
                 To start a charter, there is a one time payment of $50.00 USD. This charge is to cover the cost of the charter box that we ship to you once we approve your application. If your application doesn&apos;t get approved, you will be given a full refund.
             </p>
             <p className='mb-8 text-md mx-auto max-w-xl'>
-                By clicking submit, you agree to the <a className='underline' href="/terms">Terms and Conditions</a> of the FPA Charter System.
+                By clicking submit, you agree to the <Link className='underline' href="/terms">Terms and Conditions</Link> of the FPA Charter System.
             </p>
         </section>
     </form>

@@ -6,18 +6,6 @@ import Seo from "../components/seo"
 
 import Announcement from "../components/announcement"
 
-// import { announcements } from "../server/models"
-
-export async function getServerSideProps() {
-  // const _announcements = await announcements.findAll();
-
-  return {
-    props: {
-      // announcements: _announcements,
-    },
-  }
-}
-
 export default function IndexPage ({ announcements }) {
 
   return <Layout>

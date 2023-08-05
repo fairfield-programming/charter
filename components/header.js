@@ -1,5 +1,6 @@
 import * as React from "react"
 import Link from 'next/link'
+import Logo from '../public/logo.svg'
 
 const Header = ({ auth }) => (
 
@@ -16,7 +17,7 @@ const Header = ({ auth }) => (
       className="flex h-10 whitespace-nowrap px-4 font-bold items-center justify-center rounded-lg border"
     >
       <span className="sr-only">FPA Charter Program Logo</span>
-      🎒 Charter
+      <img src={Logo} alt="FPA Charter Program Logo" />
     </Link>
 
     <ul className="flex items-center gap-2 text-sm font-medium text-gray-500">

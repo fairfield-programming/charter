@@ -14,7 +14,7 @@ export default function CharterPage ({ announcement }) {
 
     return <Layout>
         <Head>
-            <title>{ announcement.title } • Announcement • The FPA Charter Program</title>
+            <title>{ announcement.title } • Announcement • FPA Charter Portal</title>
         </Head>
         <section className="max-w-5xl mt-16 p-4 mx-auto">
             <h1 className="text-5xl font-black">{ announcement.title }</h1>

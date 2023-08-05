@@ -25,7 +25,7 @@ const Tabbar = ({ pages }) => {
         <ul class="w-full flex border-b border-gray-100">
             {
                 (pages || []).map(i => 
-                    <TabbarItem url={i.url} text={i.text} icon={i.icon} />)
+                    <TabbarItem key={i.url} url={i.url} text={i.text} icon={i.icon} />)
             }
         </ul>
     </section>

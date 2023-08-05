@@ -46,7 +46,7 @@ export default function IndexPage ({ mainAnnouncement, globalAnnouncements }) {
       </h1>
 
       <p class="mt-4 sm:text-xl sm:leading-relaxed max-w-2xl">
-          Ok, maybe we don't have cookies. But, we have the tools to
+          Ok, maybe we don&apos;t have cookies. But, we have the tools to
           help you teach programming, along with a network of volunteers just like you.
       </p>
     </section>
@@ -62,7 +62,7 @@ export default function IndexPage ({ mainAnnouncement, globalAnnouncements }) {
       <h2 className="text-3xl font-black">Local Announcements</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
         {
-          (localAnnouncements || []).map(i => <Announcement small id={i.id} title={i.title} short={i.short} />)
+          (localAnnouncements || []).map(i => <Announcement small key={i.id} id={i.id} title={i.title} short={i.short} />)
         }
       </div>
     </section>
@@ -70,7 +70,7 @@ export default function IndexPage ({ mainAnnouncement, globalAnnouncements }) {
       <h2 className="text-3xl font-black">Global Announcements</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
         {
-          (globalAnnouncements || []).map(i => <Announcement small id={i.id} title={i.title} short={i.short} />)
+          (globalAnnouncements || []).map(i => <Announcement small key={i.id} id={i.id} title={i.title} short={i.short} />)
         }
       </div>
     </section>

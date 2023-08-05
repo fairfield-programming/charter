@@ -27,7 +27,7 @@ export default function CharterPage ({ charter }) {
                     <h2 className="text-3xl font-black">Members</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-4">
                         {
-                            (charter.users || []).map(i => <UserIcon id={i.id} profilePhoto={i.profilePhoto} name={i.full_name} />)
+                            (charter.users || []).map(i => <UserIcon id={i.id} key={i.id} profilePhoto={i.profilePhoto} name={i.full_name} />)
                         }
                     </div>
                 </> : <></>
