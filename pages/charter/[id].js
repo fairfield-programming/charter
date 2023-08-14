@@ -15,6 +15,8 @@ export default function CharterPage ({ charter }) {
 
     const [ search, setSearch ] = React.useState("");
 
+    const data = JSON.stringify(charter.data)
+
     return <Layout>
         <Head>
             <title>{ charter.name } • The FPA Charter Program</title>
@@ -22,6 +24,7 @@ export default function CharterPage ({ charter }) {
         <section className="max-w-5xl mt-16 p-4 mx-auto">
             <h1 className="text-5xl font-black">{ charter.name }</h1>
             <p className="my-4">{ charter.description }</p>
+            <p>{ data }</p>
             {
                     (charter.users || []).length > 0 ? <>
                     <h2 className="text-3xl font-black">Members</h2>

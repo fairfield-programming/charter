@@ -16,14 +16,45 @@ function serialize(obj) {
 
 export default async function handler(req, res) {
   
+    // Verify School Information
+    if (req.body.school_name == undefined) return res.status(400).json({ error: "School Name is not defined." });
+    if (req.body.school_nces_id == undefined) return res.status(400).json({ error: "NCES ID is not defined." });
+    if (req.body.address_line == undefined) return res.status(400).json({ error: "Address Line is not defined." });
+    if (req.body.address_town == undefined) return res.status(400).json({ error: "Address Town is not defined." });
+    if (req.body.address_area_code == undefined) return res.status(400).json({ error: "Address Area Code is not defined." });
+    if (req.body.website == undefined) return res.status(400).json({ error: "Website is not defined." });
+    if (req.body.school_type == undefined) return res.status(400).json({ error: "School Type is not defined." });
+    
+    // Verify President Information
+    if (req.body.president_name == undefined) return res.status(400).json({ error: "President Name is not defined." });
+    if (req.body.president_email == undefined) return res.status(400).json({ error: "President Email is not defined." });
+    if (req.body.president_dob == undefined) return res.status(400).json({ error: "President Date of Birth is not defined." });
+
+    // Verify Vice-President Information
+    if (req.body.vice_president_name == undefined) return res.status(400).json({ error: "Vice President Name is not defined." });
+    if (req.body.vice_president_email == undefined) return res.status(400).json({ error: "Vice President Email is not defined." });
+    if (req.body.vice_president_dob == undefined) return res.status(400).json({ error: "Vice President Date of Birth is not defined." });
+
+    // Verify Treasurer Information
+    if (req.body.treasurer_name == undefined) return res.status(400).json({ error: "Treasurer Name is not defined." });
+    if (req.body.treasurer_email == undefined) return res.status(400).json({ error: "Treasurer Email is not defined." });
+    if (req.body.treasurer_dob == undefined) return res.status(400).json({ error: "Treasurer Date of Birth is not defined." });
+
+    // Verify Administrator Information
+    if (req.body.administrator_name == undefined) return res.status(400).json({ error: "Administrator Name is not defined." });
+    if (req.body.administrator_email == undefined) return res.status(400).json({ error: "Administrator Email is not defined." });
+    if (req.body.administrator_position == undefined) return res.status(400).json({ error: "Administrator Position is not defined." });
+
+    // Check the Location
     const geocodeDataRaw = await fetch(`https://nominatim.openstreetmap.org/search.php?${serialize({
         street: req.body.address_line,
         city: req.body.address_town,
-        state: req.body.address_state,
         postalcode: req.body.address_area_code,
         format: 'jsonv2'
-      })}`);
+    })}`);
     const geocodeDataJson = await geocodeDataRaw.json();
+
+    // Sort the possible locations (make sure the school is in front)
     const geocodeDataJsonSorted = geocodeDataJson.sort((a, b) => {
         const isGoodMatchA = a.type.toLowerCase().startsWith('school');
         const isGoodMatchB = b.type.toLowerCase().startsWith('school');
@@ -35,19 +66,21 @@ export default async function handler(req, res) {
         return a.type.localeCompare(b.type);
     });
 
+    // If the Address Cant be Found, It is Invalid
     if (geocodeDataJsonSorted.length == 0) return res.status(400).json({ error: "Invalid Address" });
     const { lon: long, lat, display_name } = geocodeDataJsonSorted[0];
 
-    const displayNameSections = display_name.split(', ')
-    const state = displayNameSections[displayNameSections.length - 3]
-    const city = displayNameSections[displayNameSections.length - 5]
+    // Grab the State and City
+    const state = req.body.state
+    const city = req.body.address_town
 
+    // Create a Charter
     const _charter = await Charter.create({
         name: req.body.school_name,
         description: `${req.body.school_name} is a highschool located in ${city}, ${state}.`,
         long, 
         lat,
-        icon: "",
+        // icon: "",
         data: JSON.stringify({
             nces_id: req.body.school_nces_id,
             type: req.body.school_type,
@@ -55,65 +88,73 @@ export default async function handler(req, res) {
                 name: req.body.administrator_name,
                 email: req.body.administrator_email,
                 position: req.body.administrator_position
-            }
+            },
+            website: req.body.website
         }),
-        public: false
+        verified: false
     });
 
-    const presidentHashed = await bcrypt.hash(req.body.president_name, 10);
-    const vicePresidentHashed = await bcrypt.hash(req.body.vice_president_name, 10);
-    const treasurerHashed = await bcrypt.hash(req.body.treasurer_name, 10);
+    // Create Passwords for the President, Vice-President, and Treasurer
+    const presidentHashed = await bcrypt.hash(req.body.president_dob, 10);
+    const vicePresidentHashed = await bcrypt.hash(req.body.vice_president_dob, 10);
+    const treasurerHashed = await bcrypt.hash(req.body.treasurer_dob, 10);
 
+    // Create an Account for the President
     const president = await User.create({
         full_name: req.body.president_name,
         username: req.body.president_name.toLowerCase().replace(/ /g, '-'),
         password: presidentHashed,
-        email: req.body.president_email,
-        charterId: _charter.id
+        email: req.body.president_email
     })
 
+    // Create an Account for the Vice-president
     const vicePresident = await User.create({
         full_name: req.body.vice_president_name,
         username: req.body.vice_president_name.toLowerCase().replace(/ /g, '-'),
         password: vicePresidentHashed,
-        email: req.body.vice_president_email,
-        charterId: _charter.id
+        email: req.body.vice_president_email
     })
 
+    // Create an Account for the Treasurer
     const treasurer = await User.create({
         full_name: req.body.treasurer_name,
         username: req.body.treasurer_name.toLowerCase().replace(/ /g, '-'),
         password: treasurerHashed,
-        email: req.body.treasurer_email,
-        charterId: _charter.id
+        email: req.body.treasurer_email
     })
 
-    const announcement = await Announcement.create({
-        title: `${req.body.school_name} officially launches an FPA Charter.`,
-        short: `Today, ${req.body.president_name} launched ${req.body.school_name}'s FPA Charter.`,
-        content: `Today, ${req.body.president_name} launched ${req.body.school_name}'s FPA Charter. ${req.body.president_name} worked with ${req.body.vice_president_name}, charter vice-president, and ${req.body.treasurer_name}, charter treasurer, to make it happen. To learn more, please contact ${req.body.president_name} or check out the charter's page.`,
-        userId: president.id,
-        charterId: _charter.id
-    })
+    // Add the users to the charter
+    _charter.addUser(president);
+    _charter.addUser(vicePresident);
+    _charter.addUser(treasurer);
 
     // TODO: Charge their credit cards
     // TODO: Send out emails that tell them to reset their passwords
 
-    const session = await stripe.checkout.sessions.create({
-        line_items: [
-            {
-                price: 'price_1MmMs1HSFWYfEtuCacuyxVzJ',
-                quantity: 1,
-            },
-        ],
-        mode: 'payment',
-        success_url: `http://localhost:3000/success`,
-        cancel_url: `http://localhost:3000/join`,
-        automatic_tax: {
-            enabled: true
-        },
+    const pricePerShirt = 500;
+    const pricePerSticker = 7860 / 1000;
+    const shippingCost = 300;
+    const percentGain = 0.15;
+
+    const stickerCount = 20;
+    const shirtCount = 8;
+
+    const amount = Math.floor((shippingCost + pricePerShirt * shirtCount + pricePerSticker * stickerCount) * (1 + percentGain))
+
+    const paymentIntent = await stripe.paymentIntents.create({
+        amount: amount,
+        currency: 'usd',
+        payment_method_types: ['card'],
     });
 
-    res.redirect(303, session.url);
+    res.json({
+        pathname: `/join/payment`,
+        query: {
+            id: _charter.id,
+            secret: paymentIntent.client_secret,
+            website: req.body.website,
+            amount: amount
+        }
+    });
 
 }

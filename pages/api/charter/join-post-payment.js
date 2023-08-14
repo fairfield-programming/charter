@@ -19,6 +19,15 @@ export default async function handler(req, res) {
     // [ ] Charge the Payment on their Credit Card
     // [ ] Send Emails to them that they are pending verification
 
+    // Create the first announcement of the charter
+    const announcement = await Announcement.create({
+        title: `${req.body.school_name} officially launches an FPA Charter.`,
+        short: `Today, ${req.body.president_name} launched ${req.body.school_name}'s FPA Charter.`,
+        content: `Today, ${req.body.president_name} launched ${req.body.school_name}'s FPA Charter. ${req.body.president_name} worked with ${req.body.vice_president_name}, charter vice-president, and ${req.body.treasurer_name}, charter treasurer, to make it happen. To learn more, please contact ${req.body.president_name} or check out the charter's page.`,
+        userId: president.id,
+        charterId: _charter.id
+    })
+    
     res.status(200).json(req);
 
 }

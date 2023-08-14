@@ -20,6 +20,7 @@ export default (sequelize, DataTypes) => {
     icon: DataTypes.TEXT,
     long: DataTypes.FLOAT,
     lat: DataTypes.FLOAT,
+    verified: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'charters',

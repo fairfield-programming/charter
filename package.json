@@ -5,12 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^2.1.2",
+    "@stripe/stripe-js": "^2.0.0",
     "@tinymce/tinymce-react": "^4.3.0",
     "bcrypt": "^5.1.0",
+    "cheerio": "^1.0.0-rc.12",
     "cookie": "^0.5.0",
     "duckgen": "^1.1.1",
     "jsonwebtoken": "^9.0.0",
@@ -19,6 +22,7 @@
     "next": "13.2.4",
     "pg": "^8.10.0",
     "pg-hstore": "^2.3.4",
+    "probe-image-size": "^7.2.3",
     "react": "18.2.0",
     "react-cookie": "^4.1.1",
     "react-credit-cards": "^0.8.3",

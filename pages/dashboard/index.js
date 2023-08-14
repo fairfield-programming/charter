@@ -6,27 +6,39 @@ import Seo from "../../components/seo"
 
 import Announcement from "../../components/announcement"
 import Tabbar from '../../components/tabbar'
+import { useEffect, useState } from 'react'
 
 export default function IndexPage ({ mainAnnouncement, localAnnouncement, globalAnnouncement }) {
+
+  const [ announcements, setAnnouncements ] = useState([ ])
+
+  useEffect(() => { 
+
+    (async () => {
+
+      const req = await fetch('/api/announcement/local')
+      const data = await req.json()
+
+      setAnnouncements(data)
+
+    })()
+
+  }, [])
 
   return <Layout auth>
     <Head>
       <title>Dashboard • FPA Charter Program</title>
     </Head>
     <section className='max-w-5xl mt-16 p-4 mx-auto flex flex-row gap-4'>
-      <aside className='border rounded w-1/4'>
-
+      <aside className='border rounded w-1/4 h-min p-4'>
+        <img className='aspect-square w-32 rounded-3xl shadow border-2 border-white' src="https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=" />
+        <h1 className='font-bold mt-2'>William McGonagle</h1>
+        <p className=''>This is a default description...</p>
       </aside>
-      <main className='w-3/4 flex flex-col gap-4'>
-        <article className='border rounded w-full'>
-
-        </article>
-        <article className='border rounded w-full'>
-
-        </article>
-        <article className='border rounded w-full'>
-
-        </article>
+      <main className='w-3/4 flex flex-col gap-4 grid grid-cols-1 gap-4'>
+        {
+          (announcements).map(i => <Announcement small key={i.id} id={i.id} title={i.title} short={i.short} />)
+        }
       </main>
     </section>
     {/* <section className="max-w-5xl mt-16 p-4 mx-auto">

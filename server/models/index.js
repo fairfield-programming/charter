@@ -20,6 +20,13 @@ const Announcement = announcements(sequelize, Sequelize.DataTypes);
 User.belongsTo(Charter);
 Charter.hasMany(User);
 
+// Charter - User (many to many so that it can be separated into other database)
+const User_Profile = sequelize.define('User_Charter', {
+  role: Sequelize.INTEGER
+});
+User.belongsToMany(Charter, { through: 'User_Charter' });
+Charter.belongsToMany(User, { through: 'User_Charter' });
+
 // User - Announcement
 User.hasMany(Announcement);
 Announcement.belongsTo(User);
@@ -28,8 +35,10 @@ Announcement.belongsTo(User);
 Charter.hasMany(Announcement);
 Announcement.belongsTo(Charter);
 
-export { User, Charter, Announcement };
+export { User, Charter, Announcement, User_Profile };
 
 export const initDB = async () => {
   await sequelize.sync({ alter: true });
 };
+
+initDB();
